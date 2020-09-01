@@ -15,6 +15,7 @@ class UpdateStudentsTable extends Migration
     {
         Schema::table('students', function (Blueprint $table) {
             $table->integer('voto');
+            $table->text('descrizione');
         });
     }
 
@@ -26,7 +27,7 @@ class UpdateStudentsTable extends Migration
     public function down()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->dropColumn('voto');
+            $table->dropColumn(['voto', 'descrizione']);
         });
     }
 }

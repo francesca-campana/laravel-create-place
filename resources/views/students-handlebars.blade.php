@@ -3,7 +3,19 @@
   <h1>Pagina Students</h1>
 
   <h2>Teacher: </h2>
-  <div>
+  <div id="lista-students">
+
+  </div>
+
+  <script id="students-template" type="text/x-handlebars-template">
+    <ul>
+      <li>Nome: @{{ nome }}</li>
+      <li>Cognome: @{{ cognome }}</li>
+      <li>Voto: @{{ voto }}</li>
+      <li>Descrizione: @{{ descrizione }}</li>
+    </ul>
+  </script>
+  {{-- <div>
     @foreach ($students as $student)
       <ul>
         <li>Nome: {{ $student->nome }}</li>
@@ -14,5 +26,5 @@
 
     @endforeach
 
-  </div>
+  </div> --}}
 @endsection

@@ -11,6 +11,6 @@ class Student extends Model
     'nome',
     'cognome',
     'voto',
-
+    'descrizione',
   ];
 }
